@@ -3,3 +3,15 @@ a) seadista - määra kasutajanimi, email, editor - git config käsuga
 b) loo kataloog, kus hakkad skriptima - mkdir skriptimine
 c) sisene antud kataloogi - cd skriptimine
 d) tekita lokaalne repositoorium git süsteemi jaoks antid kaustas - git init
+remote seadistamine
+a) git remote add nimi aadress
+git remore add github https://github.com/omakasutajanimi/repositooriuminimi
+b) kontrolli git remote
+git remote -v
+põhikasutamine
+a) pane fail jälgimisele: git add failinimi
+b) lisa muudatuse kirjeldus (lühike)
+	git commit -m "kirjelduse lühike lause"
+või
+	git -a 	- sel juhul editoriga kirjuta lühikirjeldus
+c) git push remote_nimi versioonide_halduse_üksus_nimi
