@@ -1,0 +1,28 @@
+#!/bin/bash
+#
+# arvu kontroll - positiivne või negatiivne
+#
+# kontrollime, kas on sisestatud 1 parameeter
+# vaatame, kui ei ole nii, siis trükime välja kasutusjuhend
+if [ $# -ne 1 ]; then 
+   echo "Kasutusjuhend: "
+   echo "$0 arv"
+   echo "Näiteks $0 5"
+# kui on kõik korras, ja parameetrite arv on 1
+else
+   arv=$1
+   # nüüd kontrollime, kas arv on positiibne
+   # sel juhul arv peab olema suurem kui 0
+   if [ $arv -gt 0 ]; then
+      #jah, arv on suurem kui 0 - positiivne
+      echo "Arv on positiivne"
+   # muidu kui ei ole suurem kui 0 - negatiivne
+   elif [ $arv -lt 0 ]; then
+      echo "Arv on negatiivne"
+   # kui esimene tingimus või teine tingimus ei sobi - neutraalne
+   else
+      echo "Arv on neutraalne"
+   # if lause tuleb korralikult lõpetada
+   fi
+# väline if lause tuleb ka korralikult lõpetada
+fi
