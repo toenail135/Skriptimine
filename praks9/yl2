@@ -3,7 +3,7 @@ for (( i = l; i <= 4; i++ ))
 do
 		for (( j = l ; j <= 2; j++ ))
 		do
-			echo -n "$i "
+			echo -n "* "
 		done
 	echo ""
 done
