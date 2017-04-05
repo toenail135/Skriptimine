@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+# kolmnurk
+#
+# read
+for((r=1; r<5; r++))
+do
+  # veerud - tärnid
+  for((t=1; t<$(($r + 1));  t++))
+  do
+    echo -n "* "
+  done
+  echo # reavahetus
+done
