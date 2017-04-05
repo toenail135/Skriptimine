@@ -15,7 +15,7 @@ do
   echo # reavahetus
 done
 #  alumine pool
-for((r=4; r>0; r--))
+for((r=3; r>0; r--))
 do
   # veerud - tärnid
   # tärnide arv algab 1-st
