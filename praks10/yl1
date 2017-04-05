@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+# tarniruut
+#
+for ((r=1; r<5; r++))
+do
+    # joonistame tärnid
+    for((v=1; v<6; v++))
+    do
+      echo -n "* "
+    done
+  # reavahetus
+  echo
+done
