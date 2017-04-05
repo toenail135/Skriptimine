@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+# kolmnurk
+#
+# read
+for((r=4; r>0; r--))
+do
+  # veerud - täpid
+  # tärnide arv algab 1-st
+  # igal read tärnide arv e itohi ületada rea numbrit
+  for((t=1; t<$r;  t++))
+  do
+    echo -n "o "
+  done
+  # tärnid
+  # tärnide arv algab 1-st
+  # igal real tärnide arv ei tohi ületada 4 - $r + 1
+  for((t=1; t<$((4 - $r +2)); t++))
+  do
+    echo -n "* "
+  done
+  echo # reavahetus
+done
