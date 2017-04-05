@@ -6,6 +6,8 @@
 for((r=1; r<5; r++))
 do
   # veerud - tärnid
+  # tärnide arv algab 1-st
+  # igal read tärnide arv e itohi ületada rea numbrit
   for((t=1; t<$(($r + 1));  t++))
   do
     echo -n "* "
