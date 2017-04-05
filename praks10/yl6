@@ -1,0 +1,25 @@
+#!/bin/bash
+#
+# kolmnurk
+#
+# read
+echo -n "Sisesta ridade arv: "
+read ridade_arv
+for((r=1; r<$(($ridade_arv+1)); r++))
+do
+  # veerud - täpid
+  # tärnide arv algab 1-st
+  # igal read tärnide arv e itohi ületada rea numbrit
+  for((t=1; t<$(($r+1));  t++))
+  do
+    echo -n "* "
+  done
+  # tärnid
+  # tärnide arv algab 1-st
+  # igal real tärnide arv ei tohi ületada 4 - $r + 1
+  for((t=1; t<$(($ridade_arv - $r + 1)); t++))
+  do
+    echo -n "o "
+  done
+  echo # reavahetus
+done
