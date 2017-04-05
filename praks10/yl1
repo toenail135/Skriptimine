@@ -2,13 +2,17 @@
 #
 # tarniruut
 #
+# tekitame read
 for ((r=1; r<5; r++))
 do
+  # kontrollime kui r on 1 VÕI (-o) r on 4
+  if [ $r -eq 1 -o $r -eq 4 ]; then
     # joonistame tärnid
     for((v=1; v<6; v++))
     do
       echo -n "* "
     done
+  fi
   # reavahetus
   echo
 done
