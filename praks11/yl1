@@ -2,7 +2,16 @@
 #
 # ip järgi arvuti kontrollimine
 #for((nr=1; nr<=10; nr++))
-for nr in 172.23.13.{20..50}
+for ip in 172.23.13.{20..50}
 do
-	echo $nr
+	# teatame antud ip pingi
+	ping -c 1 $ip > /dev/null # väljund on kustutatud
+	# kontrollime ping käsu tulemuse, kas läks läbi
+	if [ $? -eq 0 ]; then
+		#kui  $? on 0 - korras
+		echo "$ip - ok"
+	#muidu
+	else
+		echo "$ip - not"
+	fi # if lause lõpp
 done
