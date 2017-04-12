@@ -6,6 +6,7 @@ read algus
 echo -n "Sisesta arvude vahemiku lõpp: "
 read lopp
 #for((nr=1; nr<=10; nr++))
+echo -n > ping_tulemus
 for((nr=$algus; nr<=$lopp; nr++))
 do
 	# paneme ip kokku
@@ -15,9 +16,9 @@ do
 	# kontrollime ping käsu tulemuse, kas läks läbi
 	if [ $? -eq 0 ]; then
 		#kui  $? on 0 - korras
-		echo "$ip - ok"
+		echo "$ip - ok" >> ping_tulemus
 	#muidu
 	else
-		echo "$ip - not"
+		echo "$ip - not" >> ping_tulemus
 	fi # if lause lõpp
 done
