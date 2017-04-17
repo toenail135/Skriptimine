@@ -1,0 +1,28 @@
+#!/bin/bash
+# Küsime kasutajalt aega
+echo "Sisesta aja väärtus: "
+read number
+# Kui küsitud number on vahemikus 6 - 12 väljastame Tere hommikust!
+if [[ $number -ge 6 && $number -le 12 ]];then
+	echo "Tere hommikust!"
+# Kui number pole vahemikus küsitakse uuesti kas on vahemikus 12 - 18, kui on väljastatakse Tere päevast
+else
+	if [[ $number -ge 12 && $number -le 18 ]];then
+		echo "Tere päevast!"
+# Kui number pole vahemikus küsitakse uuesti kas on vahemikus 18 - 22, kui on väljastatakse Tere õhtust
+
+	else
+		if [[ $number -ge 18 && $number -le 22 ]];then
+			echo "Tere õhtust!"
+# Kui number pole vahemikus küsitakse uuesti kas on vahemikus 22 - 6, kui on väljastatakse Head ööd
+		else
+			if [[ $number -ge 22 && $number -le 24 ]] || [[ $number -ge 0 && $number -le 6 ]];then
+				echo "Head ööd"
+# Kui sisestatud number pole 0 - 24 vahemikus väljastatakse lause Vale sisend
+			else 
+				echo "Vale sisend"
+# lõpetame if käsud
+			fi
+		fi
+	fi
+fi
